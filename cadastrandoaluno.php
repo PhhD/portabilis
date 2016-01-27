@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php
-  $con = mysql_connect("localhost", "root", "") or die('Não foi possível conectar');
+  $con = mysql_connect("localhost", "hamme859_emma", "emma2016") or die('Não foi possível conectar');
 
   $nome = $_POST['nome'];
   $cpf = $_POST['cpf'];
@@ -13,9 +13,9 @@
   $datanasc = $_POST["datanasc"];
   $telefone = $_POST["telefone"];
 
-  mysql_select_db("portabilis", $con);
+  mysql_select_db("hamme859_emma", $con);
 
-  $db_selected = mysql_select_db("portabilis", $con);
+  $db_selected = mysql_select_db("hamme859_emma", $con);
 
   if (!$db_selected) {
     echo "Não conectado";

@@ -16,9 +16,9 @@
     </thead>
     <tbody>
 <?php
-	$con = mysql_connect("localhost", "root", "") or die('Não foi possível conectar');
+	$con = mysql_connect("localhost", "hamme859_emma", "emma2016") or die('Não foi possível conectar');
 
-	mysql_select_db("portabilis", $con);
+	mysql_select_db("hamme859_emma", $con);
 	$query = mysql_query("SELECT * FROM curso"); 
 
 	while($r = mysql_fetch_array($query)){ ?>

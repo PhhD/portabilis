@@ -20,8 +20,8 @@
     </thead>
     <tbody>
     <?php
-    $con = mysql_connect("localhost", "root", "") or die('Não foi possível conectar');
-    mysql_select_db("portabilis", $con);
+    $con = mysql_connect("localhost", "hamme859_emma", "emma2016") or die('Não foi possível conectar');
+    mysql_select_db("hamme859_emma", $con);
     
     
 
