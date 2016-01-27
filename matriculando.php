@@ -5,33 +5,45 @@
 </head>
 <body>
 <?php
-  $con = mysql_connect("localhost", "hamme859_emma", "emma2016") or die('Não foi possível conectar');
+  $con = mysql_connect("localhost", "root", "") or die('Não foi possível conectar');
 
-  $nome = $_POST['nome'];
-  $cpf = $_POST['cpf'];
-  $rg = $_POST['rg'];
-  $datanasc = $_POST["datanasc"];
-  $telefone = $_POST["telefone"];
+  $aluno = $_POST['aluno'];
+  $curso = $_POST['curso'];
+  $rg = $_POST["rg"];
+  $cpf = $_POST["cpf"];
+  $datamat = $_POST["datamat"];
+  $ano = $_POST["ano"];
 
-  mysql_select_db("hamme859_emma", $con);
+  mysql_select_db("portabilis", $con);
 
-  $db_selected = mysql_select_db("hamme859_emma", $con);
+  $db_selected = mysql_select_db("portabilis", $con);
 
-  /*if (!$db_selected) {
+  if (!$db_selected) {
     echo "Não conectado";
   }else{
     echo "conectado";
-  }*/
+  }
 
-  //$sql = mysql_query("INSERT INTO aluno (cpf, rg, datanasc, nome, telefone) VALUES ($cpf, $rg, $datanasc, $nome,$telefone)");
+  $sql = mysql_query("INSERT INTO matricula (aluno, curso, rg, cpf, datamat, ano) VALUES ($aluno, $curso, $rg, $cpf,$datmat, $ano)");
 
-  mysql_close($con);
+ /* mysql_close($con);
   if(!$sql){
     echo "Matricula não realizada";
   }else{
     echo "Matricula realizada com sucesso";
-  }
+  }*/
+  echo "<script>
 
+
+
+alert('CADASTRO EFETUADO COM SUCESSO');
+
+window.location.href = 'index.php';
+
+
+
+</script>";
+  
 ?>
 </body>
 </html>

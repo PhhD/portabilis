@@ -5,10 +5,11 @@
 </head>
 <body>
 	<div id="cadastro">
-		<form method="post" action="cadastrandoaluno.php">
-			<table id="TABELACAD">
+		<form>
+			<table id="TABELAINDEX">
 				<td><h1>Menu - PORTABILIS</h1></td>
 				<tr>
+				
 					<td><a href="cadastroaluno.php">Cadastro de Aluno</a></td>
 				</tr>
 				

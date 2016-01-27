@@ -1,27 +1,47 @@
-<html>
+﻿<html>
 <head>
   <title>Portabilis Avaliação Técnica - Lista de Aluno</title>
   <?php include('head.php'); ?>
+
 </head>
 <body>
 
-<table>
-<?php
-  $con = mysql_connect("localhost", "hamme859_emma", "emma2016") or die('Não foi possível conectar');
+<div class="container">
+  <table id="tabelalista" class="table table-hover">
+    <thead>
+      <tr>
+        <th>Codigo Aluno</th>
+        <th>NOME</th>
+        <th>CPF</th>
+        <th>RG</th>
+        <th>DATA DE NASCIMENTO</th>
+        <th>TELEFONE</th>
+      </tr>
+    </thead>
+    <tbody>
+    <?php
+    $con = mysql_connect("localhost", "root", "") or die('Não foi possível conectar');
+    mysql_select_db("portabilis", $con);
+    
+    
 
-  mysql_select_db("hamme859_emma", $con);
-  $query = mysql_query("SELECT * FROM aluno"); 
+    $query = mysql_query("SELECT * FROM aluno") or die(mysql_error()); 
 
-  while($r = mysql_fetch_array($query)){ ?>
-    <tr><td>  <? echo $r['codaluno'];?> </td></tr>
-    <tr><td>  <? echo $r['cpf'];?>    </td></tr>
-    <tr><td>  <? echo $r['rg'];?>     </td></tr>
-    <tr><td>  <? echo $r['datanasc'];?> </td></tr>
-    <tr><td>  <? echo $r['nome'];?>   </td></tr>
-    <tr><td>  <? echo $r['telefone'];?> </td></tr>
-  <?php } ?>
+    print_r($query);
 
-</table>
+    while($r = mysql_fetch_array($query)){ ?>
+    <tr>
+      <td><? echo $r['codaluno'];?></td>
+      <td><? echo $r['nome'];?></td>
+      <td><? echo $r['cpf'];?></td>
+      <td><? echo $r['rg'];?></td>
+      <td><? echo $r['datanasc'];?></td>
+      <td><? echo $r['telefone'];?></td>
+    </tr>
+    <?php } ?>
+    </tbody>
+  </table>
+</div>
 
 </body>
 </html>
