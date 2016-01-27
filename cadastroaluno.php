@@ -1,12 +1,9 @@
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html, charset-utf-8">
-	<title>PORTABILIS AVALIACAO TECNICA - CADASTRO DE ALUNOS</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <title>Portabilis Avaliação Técnica - Cadastro de Aluno</title>
+	<?php include('head.php'); ?>
 </head>
 <body>
-
-
 	<div id="cadastro">
 		<form method="post" action="cadastrandoaluno.php">
 			<table id="TABELACAD">
@@ -28,28 +25,24 @@
 				<tr><td>TELEFONE:</td>
 				<td><input type="text" name="telefone" id="telefone" class="txt"/></td></tr>
 				<tr>
-				<td colspan="2"><input type="submit"  value="Cadastrar" id="btnCad"> 
-				&nbsp;
-				<a href="cadastroaluno.php">
-					<input type="button" value="Cancelar" class="btn" id="btnCancelar">
-				</a>
-			</td>
-			<td colspan="2"><input type="submit"  value="Listar" id="btnCad"></td>
+				<td colspan="2"><input type="submit"  value="Cadastrar" id="btnCad">
+					<a href="cadastroaluno.php">
+						<input type="button" value="Cancelar" class="btn" id="btnCancelar">
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="listaraluno.php"><input type="button" value="Listar" class="btn" id="btnCancelar"></a>
+				</td>
 			</tr>
-			<tr><td><a href="index.php">
-					<input type="button" value="inicio" class="btn" id="btnCancelar">
-				</a></td></tr>
-
-
+			<tr>
+				<td>
+					<a href="index.php"><input type="button" value="inicio" class="btn" id="btnCancelar"></a>
+				</td>
+			</tr>
 			</table>
 		</form>
 	</div>
 </div>	
-
-
-
-
-
 </body>
 </html>
 
